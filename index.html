@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Dynamic Student Ranking And Records</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dynamic Student Ranking And Records</h1>
+
+<h2>Add Student</h2>
+
+<input type="text" id="name" placeholder="Student Name">
+<input type="text" id="roll" placeholder="Roll Number">
+<input type="number" id="marks" placeholder="Marks">
+
+<br><br>
+
+<button onclick="addStudent()">Add Student</button> <button onclick="clearFields()">Clear</button>
+
+<h2>Search Student</h2>
+
+<input type="text" id="searchRoll" placeholder="Enter Roll Number">
+
+<button onclick="searchStudent()">Search</button>
+
+<h2>Actions</h2>
+
+<button onclick="displayStudents()">Display All</button> <button onclick="sortStudents()">Sort By Marks</button> <button onclick="deleteStudent()">Delete Student</button> <button onclick="resetStudents()">Reset All Students</button> <button onclick="logout()">Logout</button>
+
+<h2>Student Records</h2>
+
+<table>
+
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Roll Number</th>
+<th>Marks</th>
+</tr>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

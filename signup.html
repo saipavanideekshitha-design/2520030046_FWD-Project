@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Student System Signup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h1>Signup</h1>
+
+<input type="text" id="signupUser" placeholder="Username">
+<input type="password" id="signupPass" placeholder="Password">
+
+<button onclick="signup()">Sign Up</button>
+
+<p>Already have account?  
+<a href="login.html">Login Here</a></p>
+
+</div>
+
+<script>
+
+function signup(){
+
+let user=document.getElementById("signupUser").value;
+let pass=document.getElementById("signupPass").value;
+
+if(user=="" || pass=="")
+{
+alert("Fill all fields");
+return;
+}
+
+localStorage.setItem("username",user);
+localStorage.setItem("password",pass);
+
+alert("Signup Successful!");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>
